@@ -1,5 +1,7 @@
 CREATE DATABASE SUCOS;
 
+USE SUCOS;
+
 CREATE TABLE tbCliente(
 	CPF VARCHAR(11),
     NOME VARCHAR(100),
@@ -33,20 +35,62 @@ CREATE TABLE `SUCOS`.`tbProduto` (
 
 DROP TABLE tbCliente3;
 
-CREATE TABLE TABELA_DE_VENDEDORES2 (
+CREATE TABLE TABELA_DE_VENDEDORES (
         MATRICULA varchar(5),
         NOME varchar(100),
         PERCENTUAL_COMISSAO float
 );
 
-DROP TABLE TABELA_DE_VENDEDORES2;
+DROP TABLE TABELA_DE_VENDEDORES;
+
+INSERT INTO tbProduto (
+	PRODUTO, NOME, EMBALAGEM, TAMANHO, SABOR, PRECO_LISTA)
+    VALUES (
+    '104107', "Light -350 ml - Melância", 'Lata', '350 ml', 'Melância', 4.56
+    );
+
+INSERT INTO TABELA_DE_VENDEDORES (
+	MATRICULA, NOME, PERCENTUAL_COMISSAO)
+    VALUES (
+    '00233', "João Geraldo da Fonseca", 0.10
+    );
+
+SELECT * FROM TABELA_DE_VENDEDORES;
+
+INSERT INTO tbProduto (
+	PRODUTO, NOME, EMBALAGEM, TAMANHO, SABOR, PRECO_LISTA)
+    VALUES (
+    '1037797', "Clean 2 Litros - Laranja", 'PET', '2 Litros', 'Laranja', 16.01
+    );
+
+INSERT INTO tbProduto (
+	PRODUTO, NOME, EMBALAGEM, TAMANHO, SABOR, PRECO_LISTA)
+    VALUES (
+    '1000889', "Sabor da Montanha - 700 ml - Uva", 'Garrafa', '700 ml', 'Uva', 6.31
+    );
+
+INSERT INTO tbProduto (
+	PRODUTO, NOME, EMBALAGEM, TAMANHO, SABOR, PRECO_LISTA)
+    VALUES (
+    '10004327', "Videira do Campo - 1,5 Litros - Melância", 'PET', '1,5 Litros', 'Melância', 19.51
+    );
 
 
+SELECT * FROM tbProduto;
 
+INSERT INTO TABELA_DE_VENDEDORES (
+	MATRICULA, NOME, PERCENTUAL_COMISSAO)
+    VALUES (
+    '00235', "Márcio Almeida Silva", 0.08
+    );
 
+INSERT INTO TABELA_DE_VENDEDORES (
+	MATRICULA, NOME, PERCENTUAL_COMISSAO)
+    VALUES (
+    '00236', "Cláudia Morais", 0.08
+    );
 
-
-
+SELECT * FROM TABELA_DE_VENDEDORES;
 
 
 
